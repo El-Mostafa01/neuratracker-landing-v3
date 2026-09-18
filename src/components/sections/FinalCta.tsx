@@ -25,10 +25,10 @@ export default function FinalCta() {
           Capture the shelf. Understand what is happening. Measure execution. Act on what matters.
         </p>
         <a
-          href="#contact"
+          href="#solutions"
           className="inline-flex h-[54px] items-center rounded-[12px] bg-white px-[26px] font-body text-[16px] font-semibold text-navy shadow-[0px_10px_30px_0px_rgba(11,21,38,0.25)] transition-transform hover:-translate-y-px active:scale-[0.98]"
         >
-          Book a demo
+          See how it works
         </a>
       </Reveal>
     </section>
