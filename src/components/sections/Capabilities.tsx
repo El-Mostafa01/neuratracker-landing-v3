@@ -73,7 +73,7 @@ export default function Capabilities() {
         {/* Row 1 */}
         <div className="grid gap-6 lg:grid-cols-[792fr_384fr]">
           <Reveal>
-            <article className="flex h-full flex-col gap-7 rounded-[20px] border border-line bg-white p-7 md:flex-row lg:h-[410px]">
+            <article className="flex h-full flex-col gap-7 rounded-[20px] border border-line bg-white p-7 md:flex-row lg:min-h-[410px]">
               <div className="flex flex-1 flex-col gap-5">
                 <div className="flex flex-col gap-[14px]">
                   <span className="grid size-11 place-items-center rounded-[12px] bg-tint text-blue"><Layers className="size-[22px]" /></span>
@@ -115,7 +115,7 @@ export default function Capabilities() {
           </Reveal>
 
           <Reveal delay={120}>
-            <Cell icon={LayoutGrid} title="Shelf Compliance" desc="Compare the shelf to the planogram: wrong slots, missing facings, misplaced products." theme="tint" kpiLabel="Planogram compliance · store average" kpiValue="91 %" className="h-full lg:h-[410px]">
+            <Cell icon={LayoutGrid} title="Shelf Compliance" desc="Compare the shelf to the planogram: wrong slots, missing facings, misplaced products." theme="tint" kpiLabel="Planogram compliance · store average" kpiValue="91 %" className="h-full lg:min-h-[410px]">
               <div className="grid grid-cols-6 gap-2">
                 {Array.from({ length: 18 }).map((_, i) => {
                   const r = Math.floor(i / 6), c = i % 6;
@@ -134,12 +134,12 @@ export default function Capabilities() {
         {/* Row 2 */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Reveal>
-            <Cell icon={Tag} title="Price Intelligence" desc="Read shelf tags and barcodes automatically. Catch wrong, missing or outdated prices." kpiLabel="Price compliance" kpiValue="88 %" className="h-full lg:h-[404px]">
-              <div className="flex flex-col gap-1.5 rounded-[10px] border border-line bg-bg-soft px-2.5 py-2.5">
-                <p className="font-body text-[11px] text-muted">Danone Nature 4×125 g · EAN 611…</p>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="rounded-[4px] border-[1.5px] border-blue-soft px-1.5 py-0.5 font-display text-[18px] font-extrabold tracking-[-0.02em] text-ink">12,90 MAD</span>
-                  <span className="flex items-center gap-1 rounded-full bg-ok-bg px-[7px] py-[3px] font-body text-[10px] font-semibold text-ok"><Check className="size-2.5" strokeWidth={3} /> Matches promo</span>
+            <Cell icon={Tag} title="Price Intelligence" desc="Read shelf tags and barcodes automatically. Catch wrong, missing or outdated prices." kpiLabel="Price compliance" kpiValue="88 %" className="h-full lg:min-h-[404px]">
+              <div className="flex flex-col gap-1.5 rounded-[10px] border border-line bg-bg-soft px-2 py-2.5">
+                <p className="truncate font-body text-[11px] text-muted">Danone Nature 4×125 g · EAN 611…</p>
+                <div className="flex items-center justify-between gap-1.5">
+                  <span className="whitespace-nowrap rounded-[4px] border-[1.5px] border-blue-soft px-1.5 py-0.5 font-display text-[16px] font-extrabold tracking-[-0.02em] text-ink">12,90 MAD</span>
+                  <span className="flex items-center gap-1 whitespace-nowrap rounded-full bg-ok-bg px-[6px] py-[3px] font-body text-[9.5px] font-semibold text-ok"><Check className="size-2.5" strokeWidth={3} /> Matches promo</span>
                 </div>
                 <div className="flex items-end gap-[2px]">
                   {Array.from({ length: 28 }).map((_, k) => <span key={k} className="h-[14px] bg-ink-2" style={{ width: k % 3 === 0 ? 3 : 1.5 }} />)}
@@ -148,7 +148,7 @@ export default function Capabilities() {
             </Cell>
           </Reveal>
           <Reveal delay={80}>
-            <Cell icon={Zap} title="Retail Execution" desc="Verify that displays, promotions and missions actually happened in store." theme="dark" kpiLabel="Promotional display compliance" kpiValue="76 %" className="h-full lg:h-[404px]">
+            <Cell icon={Zap} title="Retail Execution" desc="Verify that displays, promotions and missions actually happened in store." theme="dark" kpiLabel="Promotional display compliance" kpiValue="76 %" className="h-full lg:min-h-[404px]">
               <ul className="flex flex-col gap-2">
                 {[["Display installed", true], ["Promo tag present", true], ["Second placement", false]].map(([l, ok]) => (
                   <li key={String(l)} className="flex items-center gap-2">
@@ -162,7 +162,7 @@ export default function Capabilities() {
             </Cell>
           </Reveal>
           <Reveal delay={160}>
-            <Cell icon={Eye} title="Competitor Visibility" desc="See competitor facings, displays and promo mechanics right next to yours." kpiLabel="Competitor share of shelf" kpiValue="62 %" className="h-full lg:h-[404px]">
+            <Cell icon={Eye} title="Competitor Visibility" desc="See competitor facings, displays and promo mechanics right next to yours." kpiLabel="Competitor share of shelf" kpiValue="62 %" className="h-full lg:min-h-[404px]">
               <div className="flex flex-col gap-2">
                 <div className="flex h-[14px] gap-[3px]"><span className="w-[38%] rounded-[4px] bg-blue" /><span className="flex-1 rounded-[4px] bg-line-strong" /></div>
                 <div className="flex gap-3 font-body text-[12px] font-medium text-muted">
@@ -173,7 +173,7 @@ export default function Capabilities() {
             </Cell>
           </Reveal>
           <Reveal delay={240}>
-            <Cell icon={Route} title="Connected Field Operations" desc="Plan visits, assign missions, validate them by GPS and get the proof back." theme="tint" kpiLabel="Mission completion rate" kpiValue="94 %" className="h-full lg:h-[404px]">
+            <Cell icon={Route} title="Connected Field Operations" desc="Plan visits, assign missions, validate them by GPS and get the proof back." theme="tint" kpiLabel="Mission completion rate" kpiValue="94 %" className="h-full lg:min-h-[404px]">
               <ul className="flex flex-col gap-2">
                 {[["Casablanca Nord", 12, 12], ["Rabat · Salé", 9, 11], ["Tanger", 7, 8]].map(([z, d, t]) => (
                   <li key={String(z)} className="flex flex-col gap-[5px]">
