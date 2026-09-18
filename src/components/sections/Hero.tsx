@@ -83,15 +83,20 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* 3D store render */}
+        {/* 3D store video (Seedance render), fixed in place, white background blended away */}
         <div className="relative w-full max-w-[756px] lg:pr-6">
-          <img
-            src={asset("/images/hero/store-3d.png")}
-            alt="Isometric 3D render of a store: a merchandiser at the entrance and a fully stocked dairy fridge shelf"
+          <video
+            className="h-auto w-full mix-blend-darken"
+            src={asset("/video/hero-store.mp4")}
+            poster={asset("/images/hero/store-3d.png")}
             width={756}
             height={425}
-            className="float-slow h-auto w-full mix-blend-darken"
-            fetchPriority="high"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-label="3D animation of a store: a merchandiser at the entrance and a fully stocked dairy fridge shelf"
           />
         </div>
       </div>
